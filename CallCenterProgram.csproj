@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{89AC2BC8-2DE5-4DD3-98BE-21538B861F1D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CallCenterProgram</RootNamespace>
+    <AssemblyName>CallCenterProgram</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Presentation\Authorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Authorization.Designer.cs">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bussiness_Logic\BusinessClient.cs" />
+    <Compile Include="Bussiness_Logic\Caller.cs" />
+    <Compile Include="Bussiness_Logic\Contract.cs" />
+    <Compile Include="Bussiness_Logic\Employee.cs" />
+    <Compile Include="Bussiness_Logic\Incident.cs" />
+    <Compile Include="Bussiness_Logic\IndividualClient.cs" />
+    <Compile Include="Bussiness_Logic\Job.cs" />
+    <Compile Include="Bussiness_Logic\JobAssignment.cs" />
+    <Compile Include="Bussiness_Logic\JobBussinessLogic.cs" />
+    <Compile Include="Bussiness_Logic\Package.cs" />
+    <Compile Include="Bussiness_Logic\SecurityLevel.cs" />
+    <Compile Include="Bussiness_Logic\Service.cs" />
+    <Compile Include="Bussiness_Logic\ServiceLevel.cs" />
+    <Compile Include="Bussiness_Logic\ServiceRequest.cs" />
+    <Compile Include="Data_Access\ClientDataAccess.cs" />
+    <Compile Include="Bussiness_Logic\Call.cs" />
+    <Compile Include="Data_Access\callDataAccess.cs" />
+    <Compile Include="Bussiness_Logic\CallStats.cs" />
+    <Compile Include="Bussiness_Logic\ClientFactory.cs" />
+    <Compile Include="Bussiness_Logic\ClientInfo.cs" />
+    <Compile Include="Data_Access\ContractMaintenanceAccess.cs" />
+    <Compile Include="Data_Access\IncidentDataAccess.cs" />
+    <Compile Include="Data_Access\JobDataAccess.cs" />
+    <Compile Include="Data_Access\Employee_DataAccess.cs" />
+    <Compile Include="Bussiness_Logic\FollowUp.cs" />
+    <Compile Include="Data_Access\FollowUp_DataAccess.cs" />
+    <Compile Include="Bussiness_Logic\IClient.cs" />
+    <Compile Include="Bussiness_Logic\FollowUpBusiness.cs" />
+    <Compile Include="HomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeForm.Designer.cs">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bussiness_Logic\ManagerBusiness.cs" />
+    <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="Presentation\Business Client Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Business Client Info.Designer.cs">
+      <DependentUpon>Business Client Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\callForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\callForm.Designer.cs">
+      <DependentUpon>callForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Client Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Client Home.Designer.cs">
+      <DependentUpon>Client Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\colors.cs" />
+    <Compile Include="Presentation\Contract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Contract.Designer.cs">
+      <DependentUpon>Contract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Incident.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Employee_Presentation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Employee_Presentation.Designer.cs">
+      <DependentUpon>Employee_Presentation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Incident.Designer.cs">
+      <DependentUpon>Incident.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Individual Client Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Individual Client Info.Designer.cs">
+      <DependentUpon>Individual Client Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Insert Business Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Insert Business Client.Designer.cs">
+      <DependentUpon>Insert Business Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Insert Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Insert Client.Designer.cs">
+      <DependentUpon>Insert Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Job.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Job.Designer.cs">
+      <DependentUpon>Job.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Manager_Presentation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Manager_Presentation.Designer.cs">
+      <DependentUpon>Manager_Presentation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\PackagePerformance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\PackagePerformance.Designer.cs">
+      <DependentUpon>PackagePerformance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\ServiceRequest.Designer.cs">
+      <DependentUpon>ServiceRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Technician.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Technician.Designer.cs">
+      <DependentUpon>Technician.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Package.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Package.Designer.cs">
+      <DependentUpon>Package.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Security Level.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Security Level.Designer.cs">
+      <DependentUpon>Security Level.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Service Level.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Service Level.Designer.cs">
+      <DependentUpon>Service Level.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Service.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Service.Designer.cs">
+      <DependentUpon>Service.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\ServiceRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\FollowUp_Presentation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\FollowUp_Presentation.Designer.cs">
+      <DependentUpon>FollowUp_Presentation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Feedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Feedback.Designer.cs">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Bussiness_Logic\Manager.cs" />
+    <Compile Include="Presentation\SetReminder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\SetReminder.Designer.cs">
+      <DependentUpon>SetReminder.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Presentation\Authorization.resx">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeForm.resx">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Presentation.callForm.resources" />
+    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Presentation.Contract.resources" />
+    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Presentation.Package.resources" />
+    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Presentation.Security_Level.resources" />
+    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Presentation.Service.resources" />
+    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Presentation.Service_Level.resources" />
+    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Properties.Resources.resources" />
+    <EmbeddedResource Include="Presentation\Business Client Info.resx">
+      <DependentUpon>Business Client Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\callForm.resx">
+      <DependentUpon>callForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Client Home.resx">
+      <DependentUpon>Client Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Contract.resx">
+      <DependentUpon>Contract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Incident.resx">
+      <DependentUpon>Incident.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Individual Client Info.resx">
+      <DependentUpon>Individual Client Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Insert Business Client.resx">
+      <DependentUpon>Insert Business Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Insert Client.resx">
+      <DependentUpon>Insert Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Job.resx">
+      <DependentUpon>Job.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Bussiness_Logic\Technicians.cs" />
+    <EmbeddedResource Include="Presentation\Employee_Presentation.resx">
+      <DependentUpon>Employee_Presentation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Package.resx">
+      <DependentUpon>Package.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\PackagePerformance.resx">
+      <DependentUpon>PackagePerformance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Security Level.resx">
+      <DependentUpon>Security Level.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Service Level.resx">
+      <DependentUpon>Service Level.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Service.resx">
+      <DependentUpon>Service.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\ServiceRequest.resx">
+      <DependentUpon>ServiceRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Manager_Presentation.resx">
+      <DependentUpon>Manager_Presentation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Technician.resx">
+      <DependentUpon>Technician.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\FollowUp_Presentation.resx">
+      <DependentUpon>FollowUp_Presentation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Feedback.resx">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Presentation\SetReminder.resx">
+      <DependentUpon>SetReminder.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="ClassDiagramUpdated.cd" />
+    <None Include="obj\Debug\CallCenterProgram.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\CallCenterProgram.csproj.GenerateResource.cache" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
+    <Content Include="callcenterexit.png" />
+    <None Include="callcentermaximize.png" />
+    <None Include="callcenterminimize.png" />
+    <Content Include="obj\Debug\CallCenterProgram.csproj.FileListAbsolute.txt" />
+    <None Include="Resources\Icons\callcenterminimize.png" />
+    <None Include="Resources\Icons\callcentermaximize.png" />
+    <None Include="Resources\Icons\callcenterexit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vs\CallCenterProgram\v16\" />
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

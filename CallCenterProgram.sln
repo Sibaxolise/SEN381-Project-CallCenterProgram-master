@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallCenterProgram", "CallCenterProgram.csproj", "{89AC2BC8-2DE5-4DD3-98BE-21538B861F1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89AC2BC8-2DE5-4DD3-98BE-21538B861F1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89AC2BC8-2DE5-4DD3-98BE-21538B861F1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89AC2BC8-2DE5-4DD3-98BE-21538B861F1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89AC2BC8-2DE5-4DD3-98BE-21538B861F1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7CF03B55-D5FB-428F-B189-B75E49423466}
+	EndGlobalSection
+EndGlobal
